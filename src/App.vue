@@ -1,9 +1,13 @@
 <script setup>
+import Moon from './assets/moon.svg'
 import GithubIcon from './assets/github-mark.svg'
+import ProjectCard from './components/ProjectCard.vue'
 </script>
 
 <template>
-  <header>header</header>
+  <header>
+    <Moon />
+  </header>
 
   <main>
     <h1>Hello!</h1>
@@ -16,7 +20,7 @@ import GithubIcon from './assets/github-mark.svg'
       Currently, I'm studying my BSE in Computer Science at the University of Michigan (Ann Arbor),
       where I'm also the president of
       <a href="https://maizepages.umich.edu/organization/tetris">Michigan Tetris</a>. I enjoy
-      learning about cardistry, stacker games, anime, and Asian languages.
+      playing puzzle games, learning cardistry, watching anime, and eating pineapple on pizza.
     </p>
 
     <div class="social-icons">
@@ -25,16 +29,24 @@ import GithubIcon from './assets/github-mark.svg'
       </a>
     </div>
     <h2>Projects</h2>
+    <ProjectCard />
   </main>
 </template>
 
 <style scoped>
+header {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0px 0px 6px var(--moon));
+}
 main {
   position: absolute;
   top: 200px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--secondary);
+  background: var(--primary);
   border-radius: 20px;
   padding: 1rem 2rem;
   width: 720px;
