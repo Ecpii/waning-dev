@@ -1,0 +1,28 @@
+@import './base.css';
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  /* a:hover {
+    background-color: var(--accent);
+  } */
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 28px;
+}

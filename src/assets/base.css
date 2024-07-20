@@ -1,0 +1,41 @@
+/* semantic color variables for this project */
+:root {
+  --background: #020d36;
+  --moon: #e4e0c7;
+  --text: #f0f0f2;
+  --primary: #353e65;
+  --secondary: #2d3557;
+  --accent: #5669b3;
+  --maize: #eedd28;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #020d36;
+    --moon: #e4e0c7;
+    --text: #f0f0f2;
+    --primary: #353e65;
+    --secondary: #2d3557;
+    --accent: #5669b3;
+    --maize: #eedd28;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text);
+  background: var(--background);
+  font-family: Satoshi, 'Fira Sans', 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
