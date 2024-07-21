@@ -3,7 +3,6 @@ import Moon from './assets/moon.svg'
 import GithubIcon from './assets/github-mark.svg'
 import ProjectCard from './components/ProjectCard.vue'
 import projectCardInfo from './projectCardInfo.json'
-console.log('projectCardInfo', projectCardInfo)
 </script>
 
 <template>
@@ -51,7 +50,7 @@ main {
   background: var(--primary);
   border-radius: 20px;
   padding: 1rem 2rem;
-  width: 720px;
+  width: min(720px, calc(100vw - 2rem));
   display: flex;
   align-items: center;
   flex-direction: column;

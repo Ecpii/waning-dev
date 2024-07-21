@@ -1,6 +1,5 @@
 <script setup>
 const props = defineProps(['data'])
-console.log('props.data', props.data)
 </script>
 
 <template>
@@ -37,6 +36,15 @@ console.log('props.data', props.data)
   overflow: hidden;
   display: flex;
 }
+@media (width < 740px) {
+  img {
+    display: none;
+  }
+  .container {
+    padding: 0 1rem;
+    height: auto;
+  }
+}
 .text-container {
   padding: 0.75rem 0;
   display: flex;
@@ -50,10 +58,12 @@ console.log('props.data', props.data)
   display: flex;
   gap: 1rem;
   font-size: 16px;
+  flex-wrap: wrap;
   color: var(--moon);
 }
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
   font-size: 16px;
