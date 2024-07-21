@@ -1,19 +1,28 @@
-<script setup></script>
+<script setup>
+const props = defineProps(['data'])
+console.log('props.data', props.data)
+</script>
 
 <template>
   <div class="container">
-    <img src="../assets/blochm.png" alt="bloch m" />
+    <img :src="`/src/assets/projects/${props.data.image}`" :alt="`${props.data.name} thumbnail`" />
     <div class="text-container">
-      <h3>Bloch M</h3>
-      <span class="subtitle">A tool for visualizing all single-qubit gates and states.</span>
+      <h3>{{ props.data.name }}</h3>
+      <span class="subtitle">{{ props.data.subtitle }}</span>
       <div class="tags">
-        <span class="tag">Vue</span>
-        <span class="tag">Three.js</span>
-        <span class="tag">Lorem</span>
+        <span class="tag" v-for="tag in props.data.tags" :key="tag">{{ tag }}</span>
       </div>
       <div class="buttons">
-        <a href="" class="main-button"> Homepage </a>
-        <a href="" class="secondary-button"> Repository </a>
+        <a :href="props.data.mainButton.link" class="main-button" v-if="props.data.mainButton">
+          {{ props.data.mainButton.text }}
+        </a>
+        <a
+          :href="props.data.secondaryButton.link"
+          class="secondary-button"
+          v-if="props.data.secondaryButton"
+        >
+          {{ props.data.secondaryButton.text }}
+        </a>
       </div>
     </div>
   </div>

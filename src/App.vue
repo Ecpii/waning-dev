@@ -2,6 +2,8 @@
 import Moon from './assets/moon.svg'
 import GithubIcon from './assets/github-mark.svg'
 import ProjectCard from './components/ProjectCard.vue'
+import projectCardInfo from './projectCardInfo.json'
+console.log('projectCardInfo', projectCardInfo)
 </script>
 
 <template>
@@ -29,7 +31,7 @@ import ProjectCard from './components/ProjectCard.vue'
       </a>
     </div>
     <h2>Projects</h2>
-    <ProjectCard />
+    <ProjectCard v-for="cardInfo in projectCardInfo" :key="cardInfo.name" :data="cardInfo" />
   </main>
 </template>
 

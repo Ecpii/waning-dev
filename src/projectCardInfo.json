@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Bloch M",
+    "subtitle": "A tool for visualizing all single-qubit gates and states.",
+    "tags": ["Vue", "Three.js", "Quantum Computing"],
+    "image": "blochm.png",
+    "mainButton": {
+      "text": "Homepage",
+      "link": "https://ecpii.github.io/bloch-m"
+    },
+    "secondaryButton": {
+      "text": "Repository",
+      "link": "https://github.com/Ecpii/bloch-m"
+    }
+  }
+]
