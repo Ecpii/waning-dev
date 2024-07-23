@@ -2,6 +2,12 @@
 import Moon from './assets/moon.svg'
 import GithubIcon from './assets/github-mark.svg'
 import ProjectContent from './components/projects/ProjectContent.vue'
+import EducationContent from './components/education/EducationContent.vue'
+import ExperienceContent from './components/experience/ExperienceContent.vue'
+import { ref } from 'vue'
+// Default theme
+import '@splidejs/vue-splide/css'
+const page = ref('Projects')
 </script>
 
 <template>
@@ -28,8 +34,12 @@ import ProjectContent from './components/projects/ProjectContent.vue'
         <GithubIcon width="100%" height="100%" />
       </a>
     </div>
-    <h2>Projects</h2>
-    <ProjectContent />
+    <h2>{{ page }}</h2>
+    <Splide :options="{ width: '100%' }">
+      <SplideSlide><ProjectContent /></SplideSlide>
+      <SplideSlide><EducationContent /></SplideSlide>
+      <SplideSlide><ExperienceContent /></SplideSlide>
+    </Splide>
   </main>
 </template>
 
