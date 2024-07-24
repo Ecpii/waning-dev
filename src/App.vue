@@ -4,10 +4,8 @@ import GithubIcon from './assets/github-mark.svg'
 import ProjectContent from './components/projects/ProjectContent.vue'
 import EducationContent from './components/education/EducationContent.vue'
 import ExperienceContent from './components/experience/ExperienceContent.vue'
-import { ref } from 'vue'
-// Default theme
+import { Splide, SplideSlide } from '@splidejs/vue-splide'
 import '@splidejs/vue-splide/css'
-const page = ref('Projects')
 </script>
 
 <template>
@@ -34,16 +32,64 @@ const page = ref('Projects')
         <GithubIcon width="100%" height="100%" />
       </a>
     </div>
-    <h2>{{ page }}</h2>
-    <Splide :options="{ width: '100%' }">
-      <SplideSlide><ProjectContent /></SplideSlide>
-      <SplideSlide><EducationContent /></SplideSlide>
-      <SplideSlide><ExperienceContent /></SplideSlide>
+    <Splide
+      :options="{
+        width: '100%',
+        pagination: false,
+        autoHeight: true,
+        rewind: true,
+        gap: '2rem',
+        speed: 600
+      }"
+    >
+      <SplideSlide>
+        <div class="slide">
+          <h2>Projects</h2>
+          <ProjectContent />
+        </div>
+      </SplideSlide>
+      <SplideSlide>
+        <div class="slide">
+          <h2>Education</h2>
+          <EducationContent />
+        </div>
+      </SplideSlide>
+      <SplideSlide>
+        <div class="slide">
+          <h2>Experience</h2>
+          <ExperienceContent />
+        </div>
+      </SplideSlide>
     </Splide>
   </main>
 </template>
 
+<style>
+.splide__arrow {
+  top: 0.5rem;
+  transform: none;
+  background: url('./assets/moon-button.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+.splide__arrow:hover:not(:disabled) {
+  opacity: 1;
+}
+.splide__arrow--next {
+  transform: rotate(180deg);
+}
+.splide__arrow svg {
+  display: none;
+}
+</style>
 <style scoped>
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
 header {
   position: absolute;
   top: 20px;
