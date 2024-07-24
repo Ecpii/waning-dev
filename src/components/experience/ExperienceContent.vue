@@ -3,7 +3,7 @@
 <template>
   <div class="entry-container">
     <div class="image-container">
-      <img src="/src/assets/experience/tour.png" />
+      <img src="/experience/tour.png" />
     </div>
     <div class="text-container">
       <div class="text-header">

@@ -4,7 +4,7 @@ const props = defineProps(['data'])
 
 <template>
   <div class="container">
-    <img :src="`/src/assets/projects/${props.data.image}`" :alt="`${props.data.name} thumbnail`" />
+    <img :src="`/projects/${props.data.image}`" :alt="`${props.data.name} thumbnail`" />
     <div class="text-container">
       <h3>{{ props.data.name }}</h3>
       <span class="subtitle">{{ props.data.subtitle }}</span>
