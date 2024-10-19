@@ -2,7 +2,7 @@
 import Moon from './assets/moon.svg'
 import GithubIcon from './assets/github-mark.svg'
 import ProjectContent from './components/projects/ProjectContent.vue'
-import EducationContent from './components/education/EducationContent.vue'
+import PassionContent from './components/passion/PassionContent.vue'
 import ExperienceContent from './components/experience/ExperienceContent.vue'
 import { Splide, SplideSlide } from '@splidejs/vue-splide'
 import '@splidejs/vue-splide/css'
@@ -17,14 +17,11 @@ import '@splidejs/vue-splide/css'
     <h1>Hello!</h1>
     <p>
       I'm <b>waning</b> <span class="light">(also sometimes known as <b>ecpi</b>)</span>, and I make
-      things with code. I'm a fan of all things tech, but I'm currently very interested in quantum
-      computing and secure programming.
+      things with code. I also enjoy playing puzzle games and learning about cardistry.
     </p>
     <p>
-      Currently, I'm studying my BSE in Computer Science at the University of Michigan (Ann Arbor),
-      where I'm also the president of
-      <a href="https://maizepages.umich.edu/organization/tetris">Michigan Tetris</a>. I enjoy
-      playing puzzle games, learning cardistry, watching anime, and eating pineapple on pizza.
+      Currently, I'm studying Computer Science at the University of Michigan. I've done a decent amount of work in web
+      development here, but I'm also very interested in dev tools, new languages, and quantum programming!
     </p>
 
     <div class="social-icons">
@@ -32,16 +29,14 @@ import '@splidejs/vue-splide/css'
         <GithubIcon width="100%" height="100%" />
       </a>
     </div>
-    <Splide
-      :options="{
-        width: '100%',
-        pagination: false,
-        autoHeight: true,
-        rewind: true,
-        gap: '2rem',
-        speed: 600
-      }"
-    >
+    <Splide :options="{
+      width: '100%',
+      pagination: false,
+      autoHeight: true,
+      rewind: true,
+      gap: '2rem',
+      speed: 600
+    }">
       <SplideSlide>
         <div class="slide">
           <h2>Projects</h2>
@@ -50,8 +45,8 @@ import '@splidejs/vue-splide/css'
       </SplideSlide>
       <SplideSlide>
         <div class="slide">
-          <h2>Education</h2>
-          <EducationContent />
+          <h2>Passions</h2>
+          <PassionContent />
         </div>
       </SplideSlide>
       <SplideSlide>
@@ -73,12 +68,15 @@ import '@splidejs/vue-splide/css'
   background-repeat: no-repeat;
   opacity: 0.8;
 }
+
 .splide__arrow:hover:not(:disabled) {
   opacity: 1;
 }
+
 .splide__arrow--next {
   transform: rotate(180deg);
 }
+
 .splide__arrow svg {
   display: none;
 }
@@ -90,6 +88,7 @@ import '@splidejs/vue-splide/css'
   align-items: center;
   gap: 1rem;
 }
+
 header {
   position: absolute;
   top: 20px;
@@ -97,6 +96,7 @@ header {
   transform: translateX(-50%);
   filter: drop-shadow(0px 0px 6px var(--moon));
 }
+
 main {
   position: absolute;
   top: 200px;
@@ -115,6 +115,7 @@ main {
 .light {
   font-weight: 300;
 }
+
 .social-icons {
   display: grid;
   gap: 0.5rem;
@@ -122,10 +123,12 @@ main {
   grid-template-rows: 2rem;
   grid-auto-columns: 2rem;
 }
+
 .social-icons a {
   color: var(--text);
   filter: brightness(90%);
 }
+
 .social-icons a:hover {
   filter: brightness(120%);
   background: transparent;
