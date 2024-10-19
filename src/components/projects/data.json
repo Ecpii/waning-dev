@@ -1,9 +1,9 @@
 [
   {
     "name": "Bloch M",
-    "subtitle": "A tool for visualizing all single-qubit gates and states.",
+    "subtitle": "A tool for visualizing quantum computing.",
     "tags": ["Vue", "Three.js", "Quantum Computing"],
-    "image": "blochm.png",
+    "image": "blochm.webp",
     "mainButton": {
       "text": "Homepage",
       "link": "https://ecpii.github.io/bloch-m"
@@ -11,6 +11,54 @@
     "secondaryButton": {
       "text": "Repository",
       "link": "https://github.com/Ecpii/bloch-m"
+    }
+  },
+  {
+    "name": "Respoke",
+    "subtitle": "Natural language equation text to speech.",
+    "tags": ["BigRed//Hacks", "Vertex AI", "Web Extension", "Flask"],
+    "image": "respoke.webp",
+    "mainButton": {
+      "text": "Homepage",
+      "link": "https://respoke.study"
+    },
+    "secondaryButton": {
+      "text": "Repository",
+      "link": "https://github.com/albonwu/respoke"
+    }
+  },
+  {
+    "name": "Cascade",
+    "subtitle": "A dynamic, functional CSS trainer.",
+    "tags": ["MHacks 17", "Artificial Intelligence", "React", "Generative UI"],
+    "image": "cascade.webp",
+    "mainButton": {
+      "text": "Homepage",
+      "link": "https://devpost.com/software/cascade-xrfscu"
+    },
+    "secondaryButton": {
+      "text": "Repository",
+      "link": "https://github.com/albonwu/cascade"
+    }
+  },
+  {
+    "name": "tet.rs",
+    "subtitle": "A minimalist, modern stacking practice tool.",
+    "tags": ["WebAssembly", "Rust", "Game Development"],
+    "image": "tetrs.png",
+    "mainButton": {
+      "text": "Homepage",
+      "link": "https://tetrs.waning.dev"
+    }
+  },
+  {
+    "name": "Responseble.tech",
+    "subtitle": "A media website that disrupts echo chambers.",
+    "tags": ["HackDearborn", "React", "Firebase", "NLP"],
+    "image": "responseble.webp",
+    "mainButton": {
+      "text": "Homepage",
+      "link": "https://devpost.com/software/responseble"
     }
   }
 ]

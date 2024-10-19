@@ -4,7 +4,9 @@ const props = defineProps(['data'])
 
 <template>
   <div class="container">
-    <img :src="`/projects/${props.data.image}`" :alt="`${props.data.name} thumbnail`" />
+    <div class="img-container">
+      <img :src="`/projects/${props.data.image}`" :alt="`${props.data.name} thumbnail`" />
+    </div>
     <div class="text-container">
       <h3>{{ props.data.name }}</h3>
       <span class="subtitle">{{ props.data.subtitle }}</span>
@@ -12,14 +14,11 @@ const props = defineProps(['data'])
         <span class="tag" v-for="tag in props.data.tags" :key="tag">{{ tag }}</span>
       </div>
       <div class="buttons">
-        <a :href="props.data.mainButton.link" class="main-button" v-if="props.data.mainButton">
+        <a :href="props.data.mainButton.link" class="main-button" target="_blank" v-if="props.data.mainButton">
           {{ props.data.mainButton.text }}
         </a>
-        <a
-          :href="props.data.secondaryButton.link"
-          class="secondary-button"
-          v-if="props.data.secondaryButton"
-        >
+        <a :href="props.data.secondaryButton.link" class="secondary-button" target="_blank"
+          v-if="props.data.secondaryButton">
           {{ props.data.secondaryButton.text }}
         </a>
       </div>
@@ -35,24 +34,30 @@ const props = defineProps(['data'])
   height: 156px;
   overflow: hidden;
   display: flex;
+  gap: 1rem;
 }
+
 @media (width < 740px) {
-  img {
+  .img-container {
     display: none;
   }
+
   .container {
     padding: 0 1rem;
     height: auto;
   }
 }
+
 .text-container {
   padding: 0.75rem 0;
   display: flex;
   flex-direction: column;
 }
+
 .subtitle {
   opacity: 0.8;
 }
+
 .tags {
   margin-top: 0.25rem;
   display: flex;
@@ -61,6 +66,7 @@ const props = defineProps(['data'])
   flex-wrap: wrap;
   color: var(--moon);
 }
+
 .buttons {
   display: flex;
   flex-wrap: wrap;
@@ -68,9 +74,11 @@ const props = defineProps(['data'])
   margin-top: 1rem;
   font-size: 16px;
 }
+
 .buttons a:hover {
   filter: brightness(110%);
 }
+
 .main-button {
   background: var(--accent);
   color: var(--text);
@@ -78,13 +86,21 @@ const props = defineProps(['data'])
   padding: 0.125rem 1rem;
   font-weight: 500;
 }
+
 .secondary-button {
   color: var(--text);
   font-weight: 500;
   padding: 0.125rem 0;
 }
+
+.img-container {
+  height: 100%;
+  width: 220px;
+  clip-path: circle(120px at 85px 75px);
+}
+
 img {
   height: 100%;
-  clip-path: circle(110px at 75px 75px);
+  float: right
 }
 </style>

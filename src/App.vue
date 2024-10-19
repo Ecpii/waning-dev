@@ -35,7 +35,7 @@ import '@splidejs/vue-splide/css'
       autoHeight: true,
       rewind: true,
       gap: '2rem',
-      speed: 600
+      speed: 600,
     }">
       <SplideSlide>
         <div class="slide">
@@ -49,12 +49,12 @@ import '@splidejs/vue-splide/css'
           <PassionContent />
         </div>
       </SplideSlide>
-      <SplideSlide>
+      <!-- <SplideSlide>
         <div class="slide">
           <h2>Experience</h2>
           <ExperienceContent />
         </div>
-      </SplideSlide>
+      </SplideSlide> -->
     </Splide>
   </main>
 </template>
