@@ -1,9 +1,9 @@
 <script setup>
 import Moon from './assets/moon.svg'
-import GithubIcon from './assets/github-mark.svg'
+import LinkedIn from '@carbon/icons-vue/es/logo--linkedin/32'
+import GitHub from '@carbon/icons-vue/es/logo--github/32'
 import ProjectContent from './components/projects/ProjectContent.vue'
 import PassionContent from './components/passion/PassionContent.vue'
-import ExperienceContent from './components/experience/ExperienceContent.vue'
 import { Splide, SplideSlide } from '@splidejs/vue-splide'
 import '@splidejs/vue-splide/css'
 </script>
@@ -25,8 +25,11 @@ import '@splidejs/vue-splide/css'
     </p>
 
     <div class="social-icons">
-      <a href="https://github.com/Ecpii" target="_blank">
-        <GithubIcon width="100%" height="100%" />
+      <a href="https://github.com/Ecpii" target="_blank" aria-label="GitHub">
+        <GitHub />
+      </a>
+      <a href="https://linkedin.com/in/wayne-he-" target="_blank" aria-label="Linkedin">
+        <LinkedIn />
       </a>
     </div>
     <Splide :options="{
@@ -122,6 +125,7 @@ main {
   place-items: center;
   grid-template-rows: 2rem;
   grid-auto-columns: 2rem;
+  grid-auto-flow: column;
 }
 
 .social-icons a {
