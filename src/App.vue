@@ -1,8 +1,8 @@
 <script setup>
 import Moon from './assets/moon.svg'
-import LinkedIn from '@carbon/icons-vue/es/logo--linkedin/32'
-import GitHub from '@carbon/icons-vue/es/logo--github/32'
-import Document from '@carbon/icons-vue/es/Document/32'
+import GitHub from './assets/github.svg'
+import LinkedIn from './assets/linkedin.svg'
+import Document from './assets/document.svg'
 import ProjectContent from './components/projects/ProjectContent.vue'
 import PassionContent from './components/passion/PassionContent.vue'
 import { Splide, SplideSlide } from '@splidejs/vue-splide'
@@ -27,13 +27,13 @@ import '@splidejs/vue-splide/css'
 
     <div class="social-icons">
       <a href="https://github.com/Ecpii" target="_blank" aria-label="GitHub">
-        <GitHub />
+        <GitHub height="100%" width="100%" />
       </a>
       <a href="https://linkedin.com/in/wayne-he-" target="_blank" aria-label="Linkedin">
-        <LinkedIn />
+        <LinkedIn height="100%" width="100%" />
       </a>
       <a href="/resume.pdf" target="_blank" aria-label="Resume">
-        <Document />
+        <Document height="100%" width="100%" />
       </a>
     </div>
     <Splide :options="{
@@ -119,10 +119,10 @@ main {
 
 .social-icons {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.75rem;
   place-items: center;
-  grid-template-rows: 2rem;
-  grid-auto-columns: 2rem;
+  grid-template-rows: 1.75rem;
+  grid-auto-columns: 1.75rem;
   grid-auto-flow: column;
 }
 
