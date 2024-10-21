@@ -2,6 +2,7 @@
 import Moon from './assets/moon.svg'
 import LinkedIn from '@carbon/icons-vue/es/logo--linkedin/32'
 import GitHub from '@carbon/icons-vue/es/logo--github/32'
+import Document from '@carbon/icons-vue/es/Document/32'
 import ProjectContent from './components/projects/ProjectContent.vue'
 import PassionContent from './components/passion/PassionContent.vue'
 import { Splide, SplideSlide } from '@splidejs/vue-splide'
@@ -31,6 +32,9 @@ import '@splidejs/vue-splide/css'
       <a href="https://linkedin.com/in/wayne-he-" target="_blank" aria-label="Linkedin">
         <LinkedIn />
       </a>
+      <a href="/resume.pdf" target="_blank" aria-label="Resume">
+        <Document />
+      </a>
     </div>
     <Splide :options="{
       width: '100%',
@@ -52,12 +56,6 @@ import '@splidejs/vue-splide/css'
           <PassionContent />
         </div>
       </SplideSlide>
-      <!-- <SplideSlide>
-        <div class="slide">
-          <h2>Experience</h2>
-          <ExperienceContent />
-        </div>
-      </SplideSlide> -->
     </Splide>
   </main>
 </template>
