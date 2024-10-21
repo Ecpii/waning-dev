@@ -1,9 +1,30 @@
-<script setup></script>
+<script setup>
+let timeoutId;
+
+async function setClipboard(text) {
+  const type = "text/plain";
+  const blob = new Blob([text], { type });
+  const data = [new ClipboardItem({ [type]: blob })];
+  await navigator.clipboard.write(data);
+}
+
+function handleDiscordCopy(event) {
+  setClipboard("ecpi")
+  console.log("ecpi")
+  const targetElement = event.srcElement;
+  console.log('event', event)
+  console.log('targetElement', targetElement)
+  targetElement.innerHTML = "username copied!"
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(() => targetElement.innerHTML = "Discord", 1000);
+}
+</script>
 
 <template>
   <h3 class="title">Tetris/Stacker games</h3>
   <p>
-    I love playing competitive modern stacker games. If you also do, don't hesitate to contact me on Discord to talk
+    I love playing competitive modern stacker games. If you also do, don't hesitate to contact me on <a
+      @click="handleDiscordCopy">Discord</a> to talk
     or play! If you don't, I have plenty of clips for you to watch!
   </p>
   <div class="bullets">

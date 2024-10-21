@@ -5,12 +5,13 @@ a {
   color: var(--accent);
   font-weight: bold;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 @media (hover: hover) {
-  /* a:hover {
-    background-color: var(--accent);
-  } */
+  a:hover {
+    filter: brightness(120%);
+  }
 }
 h1,
 h2,
