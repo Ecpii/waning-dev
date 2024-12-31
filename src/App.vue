@@ -10,41 +10,42 @@ import PassionContent from './components/passion/PassionContent.vue'
 <template>
   <div class="main-container">
 
-  <header>
-    <Moon />
-    <div class="social-icons">
-      <a href="https://github.com/Ecpii" target="_blank" aria-label="GitHub">
-        <GitHub height="100%" width="100%" />
-      </a>
-      <a href="https://linkedin.com/in/wayne-he-" target="_blank" aria-label="Linkedin">
-        <LinkedIn height="100%" width="100%" />
-      </a>
-      <a href="/resume.pdf" target="_blank" aria-label="Resume">
-        <Document height="100%" width="100%" />
-      </a>
-    </div>
-  </header>
+    <header>
+      <Moon />
+      <div class="social-icons">
+        <a href="https://github.com/Ecpii" target="_blank" aria-label="GitHub">
+          <GitHub height="100%" width="100%" />
+        </a>
+        <a href="https://linkedin.com/in/wayne-he-" target="_blank" aria-label="Linkedin">
+          <LinkedIn height="100%" width="100%" />
+        </a>
+        <a href="/resume.pdf" target="_blank" aria-label="Resume">
+          <Document height="100%" width="100%" />
+        </a>
+      </div>
+    </header>
 
-  <main>
-    <h1>Hello!</h1>
-    <p>
-      I'm <b>waning</b> <span class="light">(also sometimes known as <b>ecpi</b>)</span>, and I make
-      things with code. I also enjoy playing puzzle games and learning about cardistry.
-    </p>
-    <p>
-      Currently, I'm studying Computer Science at the University of Michigan. I've done a decent amount of work in web
-      development here, but I'm also very interested in dev tools, new languages, and quantum programming!
-    </p>
+    <main>
+      <h1>Hello!</h1>
+      <p>
+        I'm <b>Wayne</b> <span class="light">(also sometimes known as <b>waning</b> or <b>ecpi</b>)</span>,
+        and I make things with code. Mainly, my experience is in web development, but I'm very interested in operating
+        systems, quantum computing, and programming languages!
+      </p>
+      <p>
+        Currently, I'm studying my BSE in Computer Science at the University of Michigan. Outside of school, I enjoy
+        learning about cardistry, stacker games, and East Asian languages.
+      </p>
 
-        <div class="slide">
-          <h2>Projects</h2>
-          <ProjectContent />
-        </div>
-        <!-- <div class="slide">
+      <div class="slide">
+        <h2>Projects</h2>
+        <ProjectContent />
+      </div>
+      <!-- <div class="slide">
           <h2>Passions</h2>
           <PassionContent />
         </div> -->
-  </main>
+    </main>
   </div>
 </template>
 
@@ -63,7 +64,7 @@ header {
   flex-direction: column;
 }
 
-header > svg {
+header>svg {
   filter: drop-shadow(0px 0px 6px var(--moon));
 }
 
