@@ -8,6 +8,7 @@ import PassionContent from './components/passion/PassionContent.vue'
 
 import { ref } from 'vue'
 import EducationContent from './components/education/EducationContent.vue'
+import ExperienceContent from './components/experience/ExperienceContent.vue'
 
 const page = ref(window.location.hash?.substring(1) ?? "projects");
 
@@ -73,6 +74,7 @@ const PAGES = [
       </nav>
       <ProjectContent v-if="page == 'projects'" />
       <EducationContent v-if="page == 'education'" />
+      <ExperienceContent v-if="page == 'experience'" />
       <PassionContent v-if="page == 'interests'" />
     </main>
   </div>
