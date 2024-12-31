@@ -70,7 +70,8 @@ const PAGES = [
           {{ p.text }}
         </a>
       </nav>
-      <ProjectContent />
+      <ProjectContent v-if="page == 'projects'" />
+      <PassionContent v-if="page == 'interests'" />
     </main>
   </div>
 </template>

@@ -35,6 +35,11 @@ const props = defineProps(['data'])
   overflow: hidden;
   display: flex;
   gap: 1rem;
+  transition: 0.4s
+}
+
+.container:hover {
+  background: var(--light-secondary)
 }
 
 @media (width < 740px) {
