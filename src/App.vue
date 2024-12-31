@@ -11,7 +11,6 @@ import { ref } from 'vue'
 const page = ref(window.location.hash?.substring(1) ?? "projects");
 
 function handleSectionClick(section) {
-  console.log('section', section)
   page.value = section
 }
 
@@ -106,7 +105,8 @@ nav {
 }
 
 .selected {
-  font-weight: bold
+  font-weight: bold;
+  /* color: var(--moon) */
 }
 
 header>svg {
