@@ -4,11 +4,11 @@ import GitHub from './assets/github.svg'
 import LinkedIn from './assets/linkedin.svg'
 import Document from './assets/document.svg'
 import ProjectContent from './components/projects/ProjectContent.vue'
-import PassionContent from './components/passion/PassionContent.vue'
-
-import { ref } from 'vue'
+import InterestsContent from './components/interests/InterestsContent.vue'
 import EducationContent from './components/education/EducationContent.vue'
 import ExperienceContent from './components/experience/ExperienceContent.vue'
+
+import { ref } from 'vue'
 
 const page = ref(window.location.hash?.substring(1) ?? "projects");
 
@@ -75,7 +75,7 @@ const PAGES = [
       <ProjectContent v-if="page == 'projects'" />
       <EducationContent v-if="page == 'education'" />
       <ExperienceContent v-if="page == 'experience'" />
-      <PassionContent v-if="page == 'interests'" />
+      <InterestsContent v-if="page == 'interests'" />
     </main>
   </div>
 </template>
