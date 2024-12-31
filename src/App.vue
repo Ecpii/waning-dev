@@ -5,13 +5,24 @@ import LinkedIn from './assets/linkedin.svg'
 import Document from './assets/document.svg'
 import ProjectContent from './components/projects/ProjectContent.vue'
 import PassionContent from './components/passion/PassionContent.vue'
-import { Splide, SplideSlide } from '@splidejs/vue-splide'
-import '@splidejs/vue-splide/css'
 </script>
 
 <template>
+  <div class="main-container">
+
   <header>
     <Moon />
+    <div class="social-icons">
+      <a href="https://github.com/Ecpii" target="_blank" aria-label="GitHub">
+        <GitHub height="100%" width="100%" />
+      </a>
+      <a href="https://linkedin.com/in/wayne-he-" target="_blank" aria-label="Linkedin">
+        <LinkedIn height="100%" width="100%" />
+      </a>
+      <a href="/resume.pdf" target="_blank" aria-label="Resume">
+        <Document height="100%" width="100%" />
+      </a>
+    </div>
   </header>
 
   <main>
@@ -25,63 +36,18 @@ import '@splidejs/vue-splide/css'
       development here, but I'm also very interested in dev tools, new languages, and quantum programming!
     </p>
 
-    <div class="social-icons">
-      <a href="https://github.com/Ecpii" target="_blank" aria-label="GitHub">
-        <GitHub height="100%" width="100%" />
-      </a>
-      <a href="https://linkedin.com/in/wayne-he-" target="_blank" aria-label="Linkedin">
-        <LinkedIn height="100%" width="100%" />
-      </a>
-      <a href="/resume.pdf" target="_blank" aria-label="Resume">
-        <Document height="100%" width="100%" />
-      </a>
-    </div>
-    <Splide :options="{
-      width: '100%',
-      pagination: false,
-      autoHeight: true,
-      rewind: true,
-      gap: '2rem',
-      speed: 600,
-    }">
-      <SplideSlide>
         <div class="slide">
           <h2>Projects</h2>
           <ProjectContent />
         </div>
-      </SplideSlide>
-      <SplideSlide>
-        <div class="slide">
+        <!-- <div class="slide">
           <h2>Passions</h2>
           <PassionContent />
-        </div>
-      </SplideSlide>
-    </Splide>
+        </div> -->
   </main>
+  </div>
 </template>
 
-<style>
-.splide__arrow {
-  top: 0.5rem;
-  transform: none;
-  background: url('./assets/moon-button.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.8;
-}
-
-.splide__arrow:hover:not(:disabled) {
-  opacity: 1;
-}
-
-.splide__arrow--next {
-  transform: rotate(180deg);
-}
-
-.splide__arrow svg {
-  display: none;
-}
-</style>
 <style scoped>
 .slide {
   display: flex;
@@ -91,24 +57,19 @@ import '@splidejs/vue-splide/css'
 }
 
 header {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 32px;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+header > svg {
   filter: drop-shadow(0px 0px 6px var(--moon));
 }
 
 main {
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--primary);
-  border-radius: 20px;
-  padding: 1rem 2rem;
   width: min(720px, calc(100vw - 2rem));
   display: flex;
-  align-items: center;
   flex-direction: column;
   gap: 1rem;
 }
@@ -118,21 +79,28 @@ main {
 }
 
 .social-icons {
-  display: grid;
-  gap: 0.75rem;
-  place-items: center;
-  grid-template-rows: 1.75rem;
-  grid-auto-columns: 1.75rem;
-  grid-auto-flow: column;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
 
 .social-icons a {
-  color: var(--text);
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--moon);
   filter: brightness(90%);
 }
 
 .social-icons a:hover {
   filter: brightness(120%);
   background: transparent;
+}
+
+.main-container {
+  display: flex;
+  gap: 1rem;
+  max-width: max(50vw, 960px);
+  margin-top: 162px;
 }
 </style>
