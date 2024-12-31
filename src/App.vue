@@ -152,6 +152,6 @@ main {
   display: flex;
   gap: 1rem;
   max-width: max(50vw, 960px);
-  margin-top: 162px;
+  margin: 162px 0;
 }
 </style>
