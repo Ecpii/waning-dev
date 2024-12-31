@@ -96,7 +96,7 @@ const props = defineProps(['data'])
 .img-container {
   height: 100%;
   width: 220px;
-  clip-path: circle(120px at 85px 75px);
+  clip-path: circle(120px at 85px 50%);
 }
 
 img {
