@@ -5,6 +5,34 @@ import LinkedIn from './assets/linkedin.svg'
 import Document from './assets/document.svg'
 import ProjectContent from './components/projects/ProjectContent.vue'
 import PassionContent from './components/passion/PassionContent.vue'
+
+import { ref } from 'vue'
+
+const page = ref(window.location.hash?.substring(1) ?? "projects");
+
+function handleSectionClick(section) {
+  console.log('section', section)
+  page.value = section
+}
+
+const PAGES = [
+  {
+    text: "Projects",
+    slug: "projects"
+  },
+  {
+    text: "Experience",
+    slug: "experience"
+  },
+  {
+    text: "Education",
+    slug: "education"
+  },
+  {
+    text: "Interests",
+    slug: "interests"
+  },
+]
 </script>
 
 <template>
@@ -37,14 +65,13 @@ import PassionContent from './components/passion/PassionContent.vue'
         learning about cardistry, stacker games, and East Asian languages.
       </p>
 
-      <div class="slide">
-        <h2>Projects</h2>
-        <ProjectContent />
-      </div>
-      <!-- <div class="slide">
-          <h2>Passions</h2>
-          <PassionContent />
-        </div> -->
+      <nav>
+        <a @click="() => handleSectionClick(p.slug)" :class="`section-button ${page == p.slug && 'selected'}`"
+          :href="`#${p.slug}`" v-for="p in PAGES" :key="p.slug">
+          {{ p.text }}
+        </a>
+      </nav>
+      <ProjectContent />
     </main>
   </div>
 </template>
@@ -62,6 +89,24 @@ header {
   display: flex;
   gap: 2rem;
   flex-direction: column;
+  /* position: sticky;
+  top: 32px; */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%
+}
+
+.section-button {
+  font-size: 28px;
+  font-weight: light;
+  color: var(--text);
+}
+
+.selected {
+  font-weight: bold
 }
 
 header>svg {
