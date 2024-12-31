@@ -6,7 +6,7 @@ import TextBlock from '../TextBlock.vue';
 <template>
   <TextBlock>
     <div class="text-header">
-      <h3>University of Michigan</h3>
+      <b>University of Michigan</b>
       <span class="date">Winter 2025</span>
     </div>
     <div class="subtitle">Instructional Aide (EECS 479: Quantum Computing)</div>
@@ -29,7 +29,7 @@ import TextBlock from '../TextBlock.vue';
   </TextBlock>
   <TextBlock>
     <div class="text-header">
-      <h3>Tour.video (YC S21)</h3>
+      <b>Tour.video (YC S21)</b>
       <span class="date">Summer 2023</span>
     </div>
     <div class="subtitle">Full Stack Engineering Intern</div>
