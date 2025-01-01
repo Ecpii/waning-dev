@@ -98,6 +98,7 @@ function handleSectionClick(section) {
   opacity: 0;
 }
 </style>
+
 <style scoped>
 .slide {
   display: flex;
@@ -115,9 +116,11 @@ header {
   top: 32px; */
 }
 
+
 nav {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%
 }
 
@@ -171,5 +174,28 @@ main {
   gap: 1rem;
   max-width: max(50vw, 960px);
   margin: 162px 0;
+}
+
+@media (width < 740px) {
+  .main-container {
+    flex-direction: column
+  }
+
+  header {
+    align-items: center;
+  }
+
+  .social-icons {
+    flex-direction: row
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav>a {
+    text-align: center
+  }
 }
 </style>
