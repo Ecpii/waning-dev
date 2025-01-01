@@ -34,6 +34,7 @@ const props = defineProps(['data'])
   height: 156px;
   overflow: hidden;
   display: flex;
+  align-items: center;
   gap: 1rem;
   transition: 0.4s
 }
@@ -42,14 +43,44 @@ const props = defineProps(['data'])
   background: var(--light-secondary)
 }
 
-@media (width < 740px) {
+.img-container {
+  height: 100%;
+  max-height: 220px;
+  width: 220px;
+  clip-path: circle(120px at 85px 50%);
+}
+
+img {
+  height: 100%;
+  float: right;
+}
+
+@media (width < 800px) {
+  .img-container>img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .img-container {
-    display: none;
+    width: calc(100% + 2rem);
+    /* clip-path: circle(280px at 50% 0); */
+    clip-path: none;
+    /*man fuck this*/
+    overflow: hidden;
   }
 
   .container {
     padding: 0 1rem;
     height: auto;
+    flex-direction: column;
+    gap: 0
+  }
+
+  .text-container {
+    align-self: flex-start
   }
 }
 
@@ -96,16 +127,5 @@ const props = defineProps(['data'])
   color: var(--text);
   font-weight: 500;
   padding: 0.125rem 0;
-}
-
-.img-container {
-  height: 100%;
-  width: 220px;
-  clip-path: circle(120px at 85px 50%);
-}
-
-img {
-  height: 100%;
-  float: right
 }
 </style>
