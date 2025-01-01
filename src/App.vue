@@ -33,7 +33,7 @@ const PAGES = {
   },
 }
 
-const page = ref(window.location.hash?.substring(1) ?? "projects");
+const page = ref((window.location.hash?.substring(1) ?? "projects") || "projects");
 
 function handleSectionClick(section) {
   page.value = section
@@ -79,7 +79,7 @@ function handleSectionClick(section) {
       </nav>
       <KeepAlive>
         <Transition name="slide-fade" mode="out-in">
-          <component :is="PAGES[page].component" />
+          <component :is="PAGES[page].component" v-if="page" />
         </Transition>
       </KeepAlive>
     </main>
