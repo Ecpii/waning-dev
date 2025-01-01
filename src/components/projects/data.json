@@ -1,7 +1,7 @@
 [
   {
     "name": "Bloch M",
-    "subtitle": "A tool for visualizing quantum computing.",
+    "subtitle": "Interactive Bloch Sphere for quantum computing.",
     "tags": ["Vue", "Three.js", "Quantum Computing"],
     "image": "blochm.webp",
     "mainButton": {
@@ -29,8 +29,8 @@
   },
   {
     "name": "Cascade",
-    "subtitle": "A dynamic, functional CSS trainer.",
-    "tags": ["MHacks 17", "Artificial Intelligence", "React", "Generative UI"],
+    "subtitle": "An elegant, function CSS trainer.",
+    "tags": ["MHacks 17", "Gemini AI", "React", "Generative UI"],
     "image": "cascade.webp",
     "mainButton": {
       "text": "Homepage",
@@ -53,7 +53,7 @@
   },
   {
     "name": "Responseble.tech",
-    "subtitle": "A media website that disrupts echo chambers.",
+    "subtitle": "A social media platform that disrupts echo chambers.",
     "tags": ["HackDearborn", "React", "Firebase", "NLP"],
     "image": "responseble.webp",
     "mainButton": {
