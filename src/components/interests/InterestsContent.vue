@@ -33,21 +33,21 @@ function handleDiscordCopy(event) {
         or play! If you don't, I have plenty of clips for you to watch!
       </p>
       <TextBlock><a href="https://four.lol/openers/hachispin" target="_blank">hachispin</a> is cool: <br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/G6bqbjiWp38?si=PCB1MZyRY2Bs1db6"
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/G6bqbjiWp38?si=PCB1MZyRY2Bs1db6"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </TextBlock>
       <TextBlock>
         <a href="https://bit.ly/STStacking" target="_blank">ST Stacking</a> is cool: <br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/pzV6JPdtNcs?si=kkJrCTMzB-EWkQ8r"
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/pzV6JPdtNcs?si=kkJrCTMzB-EWkQ8r"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </TextBlock>
       <TextBlock>
         get lucky: <br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1IirWrOgIBU?si=exwZS0tly2uhNGt5"
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/1IirWrOgIBU?si=exwZS0tly2uhNGt5"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -67,6 +67,11 @@ function handleDiscordCopy(event) {
 </template>
 
 <style scoped>
+iframe {
+  max-width: 560px;
+  max-height: 315px;
+}
+
 ul {
   padding-right: 40px;
 }
