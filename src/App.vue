@@ -9,6 +9,7 @@ import EducationContent from './components/education/EducationContent.vue'
 import ExperienceContent from './components/experience/ExperienceContent.vue'
 
 import { ref } from 'vue'
+import { Analytics } from '@vercel/analytics/vue'
 
 const PAGES = {
   "projects": {
@@ -42,6 +43,7 @@ function handleSectionClick(section) {
 </script>
 
 <template>
+  <Analytics />
   <div class="main-container">
 
     <header>
