@@ -3,17 +3,17 @@ const props = defineProps(['data'])
 </script>
 
 <template>
-  <div class="container">
-    <div class="img-container">
+  <section class="container">
+    <figure class="img-container">
       <img :src="`/projects/${props.data.image}`" :alt="`${props.data.name} thumbnail`" />
-    </div>
+    </figure>
     <div class="text-container">
       <h3>{{ props.data.name }}</h3>
       <span class="subtitle">{{ props.data.subtitle }}</span>
       <div class="tags">
         <span class="tag" v-for="tag in props.data.tags" :key="tag">{{ tag }}</span>
       </div>
-      <div class="buttons">
+      <nav class="buttons">
         <a :href="props.data.mainButton.link" class="main-button" target="_blank" v-if="props.data.mainButton">
           {{ props.data.mainButton.text }}
         </a>
@@ -21,9 +21,9 @@ const props = defineProps(['data'])
           v-if="props.data.secondaryButton">
           {{ props.data.secondaryButton.text }}
         </a>
-      </div>
+      </nav>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>

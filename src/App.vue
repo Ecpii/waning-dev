@@ -78,12 +78,26 @@ function handleSectionClick(section) {
         </a>
       </nav>
       <KeepAlive>
-        <component :is="PAGES[page].component" />
+        <Transition name="slide-fade" mode="out-in">
+          <component :is="PAGES[page].component" />
+        </Transition>
       </KeepAlive>
     </main>
   </div>
 </template>
 
+<style>
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.4s;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(-40px);
+  opacity: 0;
+}
+</style>
 <style scoped>
 .slide {
   display: flex;
