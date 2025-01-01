@@ -140,7 +140,7 @@ header>svg {
 }
 
 main {
-  width: min(720px, calc(100vw - 2rem));
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -172,13 +172,15 @@ main {
 .main-container {
   display: flex;
   gap: 1rem;
-  max-width: max(50vw, 960px);
+  width: 90vw;
+  max-width: 840px;
   margin: 162px 0;
 }
 
 @media (width < 740px) {
   .main-container {
-    flex-direction: column
+    flex-direction: column;
+    margin: 2rem 0;
   }
 
   header {
