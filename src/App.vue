@@ -10,30 +10,35 @@ import ExperienceContent from './components/experience/ExperienceContent.vue'
 
 import { ref } from 'vue'
 
+const PAGES = {
+  "projects": {
+    text: "Projects",
+    slug: "projects",
+    component: ProjectContent,
+  },
+  "experience": {
+    text: "Experience",
+    slug: "experience",
+    component: ExperienceContent,
+  },
+  "education": {
+    text: "Education",
+    slug: "education",
+    component: EducationContent
+  },
+  "interests": {
+    text: "Interests",
+    slug: "interests",
+    component: InterestsContent
+  },
+}
+
 const page = ref(window.location.hash?.substring(1) ?? "projects");
 
 function handleSectionClick(section) {
   page.value = section
 }
 
-const PAGES = [
-  {
-    text: "Projects",
-    slug: "projects"
-  },
-  {
-    text: "Experience",
-    slug: "experience"
-  },
-  {
-    text: "Education",
-    slug: "education"
-  },
-  {
-    text: "Interests",
-    slug: "interests"
-  },
-]
 </script>
 
 <template>
@@ -67,15 +72,14 @@ const PAGES = [
       </p>
 
       <nav>
-        <a @click="() => handleSectionClick(p.slug)" :class="`section-button ${page == p.slug && 'selected'}`"
-          :href="`#${p.slug}`" v-for="p in PAGES" :key="p.slug">
+        <a @click="() => handleSectionClick(key)" :class="`section-button ${page == key && 'selected'}`"
+          :href="`#${p.slug}`" v-for="(p, key) in PAGES" :key="key">
           {{ p.text }}
         </a>
       </nav>
-      <ProjectContent v-if="page == 'projects'" />
-      <EducationContent v-if="page == 'education'" />
-      <ExperienceContent v-if="page == 'experience'" />
-      <InterestsContent v-if="page == 'interests'" />
+      <KeepAlive>
+        <component :is="PAGES[page].component" />
+      </KeepAlive>
     </main>
   </div>
 </template>
