@@ -23,7 +23,7 @@ import TextBlock from '../TextBlock.vue';
         </ul>
       </TextBlock>
       <TextBlock>
-        <a href="https://www.eecs.umich.edu/courses/eecs498.001/" target="_blank"><b>EECS 479 - Quantum
+        <a href="https://www.eecs.umich.edu/courses/eecs497/" target="_blank"><b>EECS 479 - Quantum
             Computing</b></a>
         <ul>
           <li>
