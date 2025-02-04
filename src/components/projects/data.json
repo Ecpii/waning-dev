@@ -14,9 +14,23 @@
     }
   },
   {
+    "name": "Altair",
+    "subtitle": "Supercharged repository browsing.",
+    "tags": ["SpartaHack X Winner", "Next.js", "Open Source", "Gemini AI"],
+    "image": "testingaltair.png",
+    "mainButton": {
+      "text": "Homepage",
+      "link": "https://devpost.com/software/altair"
+    },
+    "secondaryButton": {
+      "text": "Repository",
+      "link": "https://github.com/albonwu/altair"
+    }
+  },
+  {
     "name": "Respoke",
     "subtitle": "Natural language equation text to speech.",
-    "tags": ["BigRed//Hacks", "Vertex AI", "Web Extension", "Flask"],
+    "tags": ["BigRed//Hacks Winner", "Vertex AI", "Web Extension", "Flask"],
     "image": "respoke.webp",
     "mainButton": {
       "text": "Homepage",
@@ -30,7 +44,7 @@
   {
     "name": "Cascade",
     "subtitle": "An elegant, functional CSS trainer.",
-    "tags": ["MHacks 17", "Gemini AI", "React", "Generative UI"],
+    "tags": ["MHacks 2024 Winner", "Gemini AI", "React", "Generative UI"],
     "image": "cascade.webp",
     "mainButton": {
       "text": "Homepage",
@@ -54,7 +68,7 @@
   {
     "name": "Responseble.tech",
     "subtitle": "A social media platform that disrupts echo chambers.",
-    "tags": ["HackDearborn", "React", "Firebase", "NLP"],
+    "tags": ["HackDearborn Winner", "React", "Firebase", "NLP"],
     "image": "responseble.webp",
     "mainButton": {
       "text": "Homepage",
