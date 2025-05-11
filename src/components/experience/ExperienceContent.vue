@@ -7,26 +7,32 @@ import TextBlock from '../TextBlock.vue';
   <article>
     <TextBlock>
       <header class="text-header">
+        <b><a href="https://ramp.com" target="_blank" style="color: inherit">Ramp</a></b>
+        <span class="date">Summer 2025</span>
+      </header>
+      <summary class="subtitle">Software Engineer Intern - Frontend</summary>
+
+      <p>
+        Super excited and grateful to work at Ramp in NYC this summer!!!!
+      </p>
+    </TextBlock>
+    <TextBlock>
+      <header class="text-header">
         <b>University of Michigan</b>
         <span class="date">Winter 2025</span>
       </header>
       <summary class="subtitle">Instructional Aide (EECS 479: Quantum Computing)</summary>
 
       <p>
-        This semester, I am very fortunate to be an IA for the newly official Quantum Computing class at UMich! If you
-        haven’t already, take a look at the qubit visualization project I made for this class after I took it!
+        My first IA position, where I helped teach a class of 100 students about quantum computing fundamentals.
+        Held a recorded lab section, office hours, and built a <a href="https://blochm.waning.dev/" target="_blank">
+          3D visualization tool for it!</a>
       </p>
       <br />
 
       <p>
-        This class covers a lot of really cool and increasingly relevant stuff like Steane/Shor’s error correcting
-        codes,
-        Grover’s Algorithm, Shor’s Algorithm, QFTs and more so I’m excited to teach it! I’ll be teaching a weekly lab
-        section, holding office hours, and helping students online, as well as maintaining Bloch M.
-      </p>
-      <br />
-      <p>
-        If you’re in this class and on this page, that’s cool! Feel free to ask me about anything in class or outside!
+        Grateful to have taught this course the first semester it's an official class and hoping to return
+        to continue and develop it!
       </p>
     </TextBlock>
     <TextBlock>

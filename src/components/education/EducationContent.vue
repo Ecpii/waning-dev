@@ -11,6 +11,19 @@ import TextBlock from '../TextBlock.vue';
 
       Coursework:
       <TextBlock>
+        <b>EECS 470 - Computer Organization</b> <br />
+        <ul>
+          <li>
+            covers: out-of-order processing (scoreboarding, Tomasulo's, P6, R10K), cache and LSQ design, multiprocessing
+          </li>
+          <li>
+            notes: hard; lot of work. don't recommend taking this accelerated version but also don't regret it.
+            content is very interesting and makes a lot of sense but writing this much SystemVerilog drives a man
+            crazy.
+          </li>
+        </ul>
+      </TextBlock>
+      <TextBlock>
         <b>EECS 482 - Operating Systems</b>
         <ul>
           <li>
@@ -19,6 +32,28 @@ import TextBlock from '../TextBlock.vue';
           <li>
             notes: loved this class, though it took a lot out of me! hardest i’ve had to work on a class for but worth,
             structured very well and great staff. content was super interesting and applicable as well.
+          </li>
+        </ul>
+      </TextBlock>
+      <TextBlock>
+        <b>EECS 483 - Compiler Construction</b> <br />
+        <ul>
+          <li>
+            covers: AST, SSA, x86, Rust, Possible Values Analysis, Register Allocation, lexing and parsing
+          </li>
+          <li>
+            notes: wish i could have focused more on this class - got very overshadowed by 470. projects were
+            structured really well and building off instructor solutions was relatively easy! a lot of the
+            problems discussed seemed to boil down to "is it undecidable or inefficient? well can we restrict
+            the language to get an optimal solution for our smaller search space?". not necessarily a bad thing,
+            just kind of an interesting trend.
+
+            <br />
+
+            completely tuned out of most of the lexing, parsing, and grammar lectures but i like how pedagogically
+            they were introduced as compiler problems solved by making compilers. the fact that lexer generators
+            <b>also</b> have a source language, intermediate language, and semantics ties the course together well
+            and cements a prominent key concept overarching the whole class.
           </li>
         </ul>
       </TextBlock>
@@ -48,8 +83,9 @@ import TextBlock from '../TextBlock.vue';
             notes: did not expect this class to be as useful as it was. It covers a lot more than just security, and I
             can
             not understate how much I have learned about how computers work from this class. It also forced me to get my
-            hands dirty with actually looking into applications using Ghidra and reading out of the x86 manual, sparking
-            my interest in low-level programming.
+            hands dirty with actually looking into binaries using Ghidra and reading out of the x86 manual
+
+            always the ULCS class I recommend to take first because of its breadth
           </li>
         </ul>
       </TextBlock>
@@ -61,8 +97,7 @@ import TextBlock from '../TextBlock.vue';
           </li>
           <li>
             notes: latter half containing non-web dev stuff was interesting to learn about and piqued my interest in how
-            distributed systems work. Also very interesting exposition to how search engines work and its parallels to
-            AI
+            distributed systems work. Also interesting exposition to how PageRank works and its parallels to AI.
           </li>
         </ul>
       </TextBlock>
@@ -77,19 +112,6 @@ import TextBlock from '../TextBlock.vue';
             computers, and what computers actually can do once we have just a few bits of logic (AND, OR, NOT)
           </li>
         </ul>
-      </TextBlock>
-      <TextBlock>
-        <b>EECS 470 - Computer Organization</b> <br />
-
-        I'll be taking this class this semester! Interested to learn about out of order processing, processor design,
-        and
-        more!
-      </TextBlock>
-      <TextBlock>
-        <b>EECS 483 - Compiler Construction</b> <br />
-
-        I'll also be taking this class this semester! I love Rust, and am excited to learn more about how compilers
-        work!
       </TextBlock>
     </TextBlock>
   </article>
