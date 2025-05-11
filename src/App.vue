@@ -65,8 +65,8 @@ function handleSectionClick(section) {
       <h1>Hello!</h1>
       <p>
         I'm <b>Wayne</b> <span class="light">(also sometimes known as <b>waning</b> or <b>ecpi</b>)</span>,
-        and I make things with code. Mainly, my experience is in web development, but I'm very interested in operating
-        systems, quantum computing, and programming languages!
+        and I make things with code. Mainly, my experience is in web development, but I'm also interested in
+        quantum computing, operating systems, and programming languages!
       </p>
       <p>
         Currently, I'm studying my BSE in Computer Science at the University of Michigan. Outside of school, I enjoy
@@ -91,12 +91,13 @@ function handleSectionClick(section) {
 <style>
 .slide-fade-enter-active,
 .slide-fade-leave-active {
-  transition: all 0.4s;
+  z-index: -1;
+  transition: all 0.2s;
 }
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-  transform: translateX(-40px);
+  transform: translateY(40px);
   opacity: 0;
 }
 </style>
@@ -123,7 +124,7 @@ nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%
+  width: 100%;
 }
 
 .section-button {
