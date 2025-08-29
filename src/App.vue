@@ -3,6 +3,7 @@ import Moon from './assets/moon.svg'
 import GitHub from './assets/github.svg'
 import LinkedIn from './assets/linkedin.svg'
 import Document from './assets/document.svg'
+import UMichIcon from './assets/umich.svg'
 import ProjectContent from './components/projects/ProjectContent.vue'
 import InterestsContent from './components/interests/InterestsContent.vue'
 import EducationContent from './components/education/EducationContent.vue'
@@ -57,6 +58,9 @@ function handleSectionClick(section) {
         </a>
         <a href="/resume.pdf" target="_blank" aria-label="Resume">
           <Document height="100%" width="100%" />
+        </a>
+        <a href="https://michigan-webring.vercel.app" target="_blank" rel="noopener noreferrer">
+          <UMichIcon height="100%" width="100%" />
         </a>
       </div>
     </header>
